@@ -1,0 +1,24 @@
+//colors
+$button-default-color: #E6E6E6;
+$button-default-text-color-old: #444; // rgba not supported (IE 8)
+$button-default-text-color: rgba(0, 0, 0, 0.80); // rgba supported
+$button-default-border-color-old: #999; // IE 6/7/8
+$button-primary-color: rgb(0, 120, 231);
+$button-primary-text-color: #fff;
+
+// menu colors
+$menu-separator-color: #ccc;
+$menu-heading-color: #565d64;
+$menu-link-color: #777;
+$menu-child-color-bg: #fff;
+$menu-hover-color-bg: #eee;
+$menu-link-visited-color: #000;
+
+// table colors
+$table-border-color: #cbcbcb;
+$table-odd-color-bg: #f2f2f2;
+$table-head-color-bg: #e0e0e0;
+$table-head-text-color: #000;
+
+// font families
+$font-sans-serif: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;

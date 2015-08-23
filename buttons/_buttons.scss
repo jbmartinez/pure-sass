@@ -1,0 +1,113 @@
+//colors
+$black_5: rgba(0,0,0, 0.05);
+$black_10: rgba(0,0,0, 0.10);
+$black_15: rgba(0,0,0, 0.15);
+$black_20: rgba(0,0,0, 0.20);
+$black: #000\9;  // a hack for IE
+
+//@extend-elements
+//original selectors
+//.pure-button-hover, .pure-button:hover, .pure-button:focus
+%extend_1 {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, $black_5), to($black_10));
+  background-image: -webkit-linear-gradient(transparent, $black_5 40%, $black_10);
+  background-image: -moz-linear-gradient(top, $black_5 0%, $black_10);
+  background-image: -o-linear-gradient(transparent, $black_5 40%, $black_10);
+  background-image: linear-gradient(transparent, $black_5 40%, $black_10);
+}
+
+//original selectors
+//.pure-button[disabled], .pure-button-disabled, .pure-button-disabled:hover, .pure-button-disabled:focus, .pure-button-disabled:active
+%extend_2 {
+  border: none;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  filter: alpha(opacity=40);
+  -khtml-opacity: 0.40;
+  -moz-opacity: 0.40;
+  opacity: 0.40;
+  cursor: not-allowed;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none;
+}
+
+
+.pure-button {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  color: $button-default-text-color-old; /* rgba not supported (IE 8) */
+  color: $button-default-text-color; /* rgba supported */
+  border: 1px solid $button-default-border-color-old; /*IE 6/7/8*/
+  border: none rgba(0, 0, 0, 0); /*IE9 + everything else*/
+  background-color: $button-default-color;
+  text-decoration: none;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 2px;
+  &:hover {
+    @extend %extend_1;
+  }
+  &:focus {
+    @extend %extend_1;
+    outline: 0;
+  }
+  &:active {
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: 0 0 0 1px $black_15 inset, 0 0 6px $black_20 inset;
+    border-color: $black;
+  }
+}
+
+.pure-button-hover {
+  @extend %extend_1;
+}
+
+.pure-button-active {
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 0 1px $black_15 inset, 0 0 6px $black_20 inset;
+  border-color: $black;
+}
+
+.pure-button[disabled] {
+  @extend %extend_2;
+}
+.pure-button-disabled {
+  @extend %extend_2;
+  &:hover {
+    @extend %extend_2;
+  }
+  &:focus {
+    @extend %extend_2;
+  }
+  &:active {
+    @extend %extend_2;
+  }
+}
+.pure-button-hidden {
+  display: none;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.pure-button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.pure-button-primary {
+  background-color: $button-primary-color;
+  color: $button-primary-text-color;
+}
+.pure-button-selected {
+  background-color: $button-primary-color;
+  color: $button-primary-text-color;
+}
+a {
+  &.pure-button-primary {
+    background-color: $button-primary-color;
+    color: $button-primary-text-color;
+  }
+  &.pure-button-selected {
+    background-color: $button-primary-color;
+    color: $button-primary-text-color;
+  }
+}
