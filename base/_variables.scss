@@ -1,36 +1,39 @@
-//colors
-$button-default-color: #E6E6E6;
-$button-default-text-color-old: #444; // rgba not supported (IE 8)
-$button-default-text-color: rgba(0, 0, 0, 0.80); // rgba supported
-$button-default-border-color-old: #999; // IE 6/7/8
-$button-primary-color: rgb(0, 120, 231);
-$button-primary-text-color: #fff;
+// button colors
+$button-default-color: #E6E6E6 !default;
+$button-default-text-color-ie: #444 !default; // rgba not supported (IE 8)
+$button-default-text-color: rgba(0, 0, 0, 0.80) !default; // rgba supported
+$button-default-border-color-ie: #999 !default; // IE 6/7/8
+$button-primary-color: rgb(0, 120, 231) !default;
+$button-primary-text-color: #fff !default;
+
+// button shape
+$button-border-radius: 2px;
 
 // menu colors
-$menu-separator-color: #ccc;
-$menu-heading-color: #565d64;
-$menu-link-color: #777;
-$menu-child-color-bg: #fff;
-$menu-hover-color-bg: #eee;
-$menu-link-visited-color: #000;
+$menu-separator-color: #ccc !default;
+$menu-heading-color: #565d64 !default;
+$menu-link-color: #777 !default;
+$menu-child-color-bg: #fff !default;
+$menu-hover-color-bg: #eee !default;
+$menu-link-visited-color: #000 !default;
 
 // table colors
-$table-border-color: #cbcbcb;
-$table-odd-color-bg: #f2f2f2;
-$table-head-color-bg: #e0e0e0;
-$table-head-text-color: #000;
+$table-border-color: #cbcbcb !default;
+$table-odd-color-bg: #f2f2f2 !default;
+$table-head-color-bg: #e0e0e0 !default;
+$table-head-text-color: #000 !default;
 
 // form colors
-$input-invalid-text-color: #b94a48;
-$input-invalid-border-color: #e9322d;
-$input-focus-border-color: #129fea;
-$input-default-border-color: #ccc;
-$input-disabled-bg-color: #eaeded;
-$input-disabled-text-color: #cad2d3;
-$input-readonly-bg-color: #eee;
-$input-readonly-text-color: #777;
-$form-legend-color: #333;
-$form-message-color: #666;
+$input-invalid-text-color: #b94a48 !default;
+$input-invalid-border-color: #e9322d !default;
+$input-focus-border-color: #129fea !default;
+$input-default-border-color: #ccc !default;
+$input-disabled-bg-color: #eaeded !default;
+$input-disabled-text-color: #cad2d3 !default;
+$input-readonly-bg-color: #eee !default;
+$input-readonly-text-color: #777 !default;
+$form-legend-color: #333 !default;
+$form-message-color: #666 !default;
 
 // font families
-$font-sans-serif: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+$font-sans-serif: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif !default;

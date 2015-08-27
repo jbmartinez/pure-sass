@@ -1,13 +1,16 @@
 # Pure.sass
 
-This is my attempt to port the great [Pure.css](http://http://purecss.io/) framework
+This is an attempt to port the great [Pure.css](http://http://purecss.io/) framework
  to [Sass](http://sass-lang.com/). I've just copied the original source files and
  replaced some properties with variables.
 
 The goal is to have an easily customizable version of Pure.css which fit in the Sass workflow.
 
-This is experimental, use the real Pure.css if you want to have an awesome
-look with a tiny framework in your site.
+It produces results seemingly identical to the original source.
+
+## How to use
+
+Customize changing the value of the variables in `base/_variables.css` and compile.
 
 ## TODO
 

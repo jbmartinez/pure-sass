@@ -37,14 +37,14 @@ $black: #000\9;  // a hack for IE
   font-family: inherit;
   font-size: 100%;
   padding: 0.5em 1em;
-  color: $button-default-text-color-old; /* rgba not supported (IE 8) */
+  color: $button-default-text-color-ie; /* rgba not supported (IE 8) */
   color: $button-default-text-color; /* rgba supported */
-  border: 1px solid $button-default-border-color-old; /*IE 6/7/8*/
+  border: 1px solid $button-default-border-color-ie; /*IE 6/7/8*/
   border: none rgba(0, 0, 0, 0); /*IE9 + everything else*/
   background-color: $button-default-color;
   text-decoration: none;
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-  border-radius: 2px;
+  border-radius: $button-border-radius;
   &:hover {
     @extend %extend_1;
   }
