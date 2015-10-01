@@ -1,6 +1,6 @@
 # Pure.sass
 
-This is an unofficial port of [Pure.css](http://http://purecss.io/) framework
+This is an unofficial port of [Pure.css](http://purecss.io/) framework
  to [Sass](http://sass-lang.com/). I've just copied the original source files and
  replaced some properties with variables.
 
