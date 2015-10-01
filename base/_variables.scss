@@ -2,7 +2,7 @@
 $button-default-color: #E6E6E6 !default;
 $button-default-text-color-ie: #444 !default; // rgba not supported (IE 8)
 $button-default-text-color: rgba(0, 0, 0, 0.80) !default; // rgba supported
-$button-default-border-color-ie: #999 !default; // IE 6/7/8
+$button-default-border-color-ie: #999 !default; // IE 6/7/8 doesn't support rgba
 $button-primary-color: rgb(0, 120, 231) !default;
 $button-primary-text-color: #fff !default;
 
