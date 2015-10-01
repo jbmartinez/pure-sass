@@ -6,6 +6,7 @@
 
 .pure-menu-horizontal .pure-menu-list {
   display: inline-block;
+  @if $menu-float-items-right { float: right; }
 }
 
 /* Initial menus should be inline-block so that they are horizontal */
