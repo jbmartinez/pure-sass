@@ -3,7 +3,7 @@ $black_5: rgba(0,0,0, 0.05);
 $black_10: rgba(0,0,0, 0.10);
 $black_15: rgba(0,0,0, 0.15);
 $black_20: rgba(0,0,0, 0.20);
-$black: #000\9;  // a hack for IE
+// $black: #000\9;  // a hack for IE
 
 //@extend-elements
 //original selectors
@@ -20,7 +20,8 @@ $black: #000\9;  // a hack for IE
 //original selectors
 //.pure-button[disabled], .pure-button-disabled, .pure-button-disabled:hover, .pure-button-disabled:focus, .pure-button-disabled:active
 %extend_2 {
-  border: none;
+  // border: none;
+  border: $button-disabled-border;
   background-image: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   filter: alpha(opacity=40);
@@ -39,8 +40,8 @@ $black: #000\9;  // a hack for IE
   padding: 0.5em 1em;
   color: $button-default-text-color-ie; /* rgba not supported (IE 8) */
   color: $button-default-text-color; /* rgba supported */
-  border: 1px solid $button-default-border-color-ie; /*IE 6/7/8*/
-  border: none rgba(0, 0, 0, 0); /*IE9 + everything else*/
+  border: $button-default-border-ie; /*IE 6/7/8*/
+  border: $button-default-border; /*IE9 + everything else*/
   background-color: $button-default-color;
   text-decoration: none;
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
@@ -55,7 +56,7 @@ $black: #000\9;  // a hack for IE
   &:active {
     //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
     box-shadow: 0 0 0 1px $black_15 inset, 0 0 6px $black_20 inset;
-    border-color: $black;
+    border-color: $button-active-border-color;
   }
 }
 
@@ -66,7 +67,7 @@ $black: #000\9;  // a hack for IE
 .pure-button-active {
   //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
   box-shadow: 0 0 0 1px $black_15 inset, 0 0 6px $black_20 inset;
-  border-color: $black;
+  border-color: $button-active-border-color;
 }
 
 .pure-button[disabled] {
