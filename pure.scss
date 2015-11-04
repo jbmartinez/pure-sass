@@ -25,3 +25,9 @@
 @import "menus/menus-dropdown";
 @import "menus/menus-scrollable";
 @import "menus/menus-skin";
+
+/* responsive grid */
+@import "grids/grids-responsive";
+@if $include-responsive-grid {
+  @include responsive-grid;
+}
