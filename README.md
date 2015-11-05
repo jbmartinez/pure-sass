@@ -13,7 +13,8 @@ It produces results seemingly identical to the original source.
 You have to import [normalize.css](https://necolas.github.io/normalize.css/) to your project.
 
 Compiling the files will produce a file with the Pure.css default look. There are
-two ways to get a custom look:
+two ways to get a custom look: Building a customized version or integrating the
+pure files into your project (preferred way).
 
 ### Build a custom Pure file
 
@@ -53,7 +54,17 @@ pure library:
 @import "yourAppFiles";
 ```
 
-Look at `pure.scss` for the available modules.
+Look at the `pure.scss` file for the available modules.
+
+## About the grid
+
+The grid module contains the default grid (the one shipped through CDN). If you built
+a custom grid, include it instead.
+
+For consistency reasons, the responsive grid is not imported by default. It can be
+included setting `$include-responsive-grid` to true. The default breakpoints values
+will be used. For custom breakpoints, set the values of `$sm-breakpoint`, `$md-breakpoint`,
+`$lg-breakpoint` and `$xl-breakpoint` accordingly.
 
 ## TODO
 
