@@ -49,3 +49,8 @@ $font-sans-serif: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif !d
 
 // grids
 $include-responsive-grid: false !default;
+
+$sm-breakpoint: 35.5em !default;
+$md-breakpoint: 48em !default;
+$lg-breakpoint: 64em !default;
+$xl-breakpoint: 80em !default;
